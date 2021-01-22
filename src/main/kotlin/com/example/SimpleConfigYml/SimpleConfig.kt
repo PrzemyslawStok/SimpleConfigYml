@@ -8,5 +8,5 @@ import org.springframework.context.annotation.Configuration
 @EnableConfigurationProperties
 @ConfigurationProperties("app")
 class SimpleConfig {
-    var app: String? = null
+    var name: String? = null
 }
