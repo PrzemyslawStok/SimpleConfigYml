@@ -12,8 +12,16 @@ class SimpleController {
     @Value("\${app.name}")
     val name: String? = null
 
+    @Value("\${app.user.name}")
+    val userName: String? = null
+
     @RequestMapping("")
     fun info():String{
         return "Aplikacja $name została uruchomiona na porcie: $port"
+    }
+
+    @RequestMapping("user")
+    fun userInfo():String{
+        return "Imię: $userName"
     }
 }
